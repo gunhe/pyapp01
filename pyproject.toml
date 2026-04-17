@@ -7,7 +7,12 @@ authors = [
     { name = "左手", email = "1107847724@qq.com" }
 ]
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "bump-my-version>=1.3.0",
+    "bumpversion>=0.6.0",
+    "diskcache>=5.6.3",
+    "requests>=2.33.1",
+]
 
 [project.scripts]
 pyapp01 = "pyapp01:main"
@@ -15,3 +20,32 @@ pyapp01 = "pyapp01:main"
 [build-system]
 requires = ["uv_build>=0.11.7,<0.12.0"]
 build-backend = "uv_build"
+
+
+[[tool.uv.index]]
+url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/"
+default = true
+
+
+
+[tool.bumpversion]
+current_version = "0.26.0"
+parse = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)"
+serialize = ["{major}.{minor}.{patch}"]
+search = "{current_version}"
+replace = "{new_version}"
+regex = false
+ignore_missing_version = false
+tag = true
+sign_tags = false
+tag_name = "v{new_version}"
+tag_message = "Bump version: {current_version} -> {new_version}"
+allow_dirty = false
+commit = true
+message = "Bump version: {current_version} -> {new_version}"
+commit_args = ""
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = 'version = "{current_version}"'
+replace = 'version = "{new_version}"'
