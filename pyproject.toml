@@ -1,0 +1,17 @@
+[project]
+name = "pyapp01"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "左手", email = "1107847724@qq.com" }
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+pyapp01 = "pyapp01:main"
+
+[build-system]
+requires = ["uv_build>=0.11.7,<0.12.0"]
+build-backend = "uv_build"

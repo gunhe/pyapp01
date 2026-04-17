@@ -1,0 +1,1 @@
+uv publish --token  pypi-AgENdGVzdC5weXBpLm9yZwIkZjdhMmJiZGItMDRiMS00MmY0LTkyYWItMTBkZjMxNGUxN2IwAAIqWzMsIjc4ZjA3NDNjLTZjYzItNDc1MS04ZmQ0LTUyZjcyN2I0YjZlOCJdAAAGIEptbcFwpL6U_C4SIroS0hD9wYsHNWj9ndtAdfyhXyxE --publish-url https://test.pypi.org/legacy/
